@@ -1,0 +1,93 @@
+body {
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+.header {
+  font-family: sans-serif;
+}
+
+.flash.error {
+  padding: 10px;
+  color: #ff6633;
+  background: #FFCFBF;
+}
+
+.flash.success {
+  color: #33cc99;
+  background: #CBF2E5;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 47px;
+  font-weight: 300;
+  background-image: url(https://rlv.zcache.com/svc/view?realview=113704270411501562&design=0718fae0-c45f-4886-ade2-cfa914d0793e&rlvnet=1&size=yard&media=combedcotton&max_dim=512);
+  background-size: 250px;
+  background-repeat: repeat;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-family: 'Risque', cursive;
+}
+
+h3 {
+  font-size: 16px;
+
+}
+
+.fa-regular {
+  color: black;
+}
+
+form.inline {
+  display: inline;
+}
+
+.user-status {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.button-success {
+  background: rgb(28, 184, 65);
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  /* this is a green */
+}
+
+.button-error {
+  background: rgb(202, 60, 60);
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  /* this is a maroon */
+}
+
+.button-clear {
+  background-color: transparent;
+}
+
+.completed {
+  color: #33cc99;
+  background: #CBF2E5;
+}
+
+.button-warning {
+  background: rgb(223, 117, 20);
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  /* this is an orange */
+}
+
+.button-secondary {
+  background: rgb(66, 184, 221);
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  /* this is a light blue */
+}

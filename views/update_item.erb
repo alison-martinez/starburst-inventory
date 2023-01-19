@@ -1,0 +1,20 @@
+<form class="pure-form pure-form-stacked" action="/categories/<%= @id %>/items/<%= @item_id %>/update" method="post">
+    <fieldset>
+        <legend>Update the item:</legend>
+        <label for="item">Item Name:</label>
+        <input type="text" name="item" value="<%= params[:item] || @item[:name] %>" />
+        <span class="pure-form-message">This is a required field.</span>
+        <br>
+        <label for="num_need">How many do you need?</label>
+        <input type="text"  name="num_need" value="<%= params[:num_need] || @item[:num_need] %>" />
+        
+        <br>
+        <label for="num_have">How many do you have?</label>
+        <input type="text"  name="num_have" value="<%= params[:num_have] || @item[:num_have] %>" />
+        
+        <br>
+
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        <a class="pure-button" href="/categories/<%= @id %>">Cancel</a>
+    </fieldset>
+</form>

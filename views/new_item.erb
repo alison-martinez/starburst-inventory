@@ -1,0 +1,23 @@
+<form class="pure-form pure-form-stacked" action="/categories/<%= @category[:id] %>/items/new" method="post">
+    <fieldset>
+        <legend>Enter a new item in the <%= @category[:category].titleize %> category:</legend>
+        <label for="item">Item Name:</label>
+        <input type="text" name="item" placeholder="<%= params[:item] || "New Item" %>" 
+            value="<%= params[:item] || "" %>" />
+        <span class="pure-form-message">This is a required field.</span>
+        <br>
+        <label for="num_need">How many do you need?</label>
+        <input type="text" name="num_need"  value="<%= params[:num_need] || "0" %>" />
+        
+        <br>
+        <label for="num_have">How many do you have?</label>
+        <input type="text"  name="num_have"  value="<%= params[:num_have] || "0" %>" />
+    
+        <br>
+
+
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        <a class="pure-button" href="/categories/<%= @category[:id] %>"/>Cancel</a>
+    </fieldset>
+</form>
+<br>

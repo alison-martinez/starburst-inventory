@@ -1,0 +1,65 @@
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header center">
+            <h1>Franciscan Starburst Inventory</h1>
+            <p><a class="pure-button pure-button-primary" href="/categories"><i class="fa-solid fa-list-ul"></i> View all categories</a></p>
+            
+            <h3>Let's see how we're doing in the <%= @category[:category].titleize %> category!</h3>
+            
+        </div>
+    </div>
+</div>
+
+
+<table class="pure-table pure-table-horizontal">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>I have...</th>
+            <th>I need...</th>
+            <th>I'm still looking for...</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+      <% @items.each do |item| %>
+        <tr class = "<%= item_class(item) %>">
+            <td><%= item[:name].titleize %></td>
+            <td><%= item[:num_have] %></td>
+            <td><%= item[:num_need] %></td>
+            <td><%= [item[:num_need] - item[:num_have], 0].max %></td>
+            <td><a href="/categories/<%= @category[:id] %>/items/<%= item[:id] %>/update">
+              <i class="fa-regular fa-pen-to-square"></i></a>
+            </td>
+            <td>
+              <form action="/categories/<%= @category[:id] %>/items/<%= item[:id] %>/delete_confirm" method="post" class="delete">
+                <button class="pure-button button-clear" type="submit">
+                <i class="fa-regular fa-trash-can"></i></button>
+              </form>
+            </td>
+        </tr>
+        
+      <% end %>
+    </tbody>
+</table>
+<br>
+<% if @page > 0 %>
+  <a href="/categories/<%= @category[:id] %>?page=<%= @page - 1 %>">Previous Results</a>
+<% end %>
+<% if @total_items - (RESULTS_PER_PAGE * (@page + 1)) > 0 %>
+  <a href="/categories/<%= @category[:id] %>?page=<%= @page + 1 %>">Next Results</a>
+<% end %>
+<br>
+<br>
+
+<form action="/categories/<%= @category[:id] %>/items/new" method="get">
+  <button class="pure-button button-success" type="submit">Add a new item in the <%= @category[:category].titleize %> category</button>
+</form>
+<br>
+<form action="/categories/<%= @category[:id] %>/delete_confirm" method="post" class="delete">
+  <button class="pure-button button-error" type="submit">Delete the entire <%= @category[:category].titleize %> category</button>
+</form>
+
+

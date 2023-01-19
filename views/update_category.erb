@@ -1,0 +1,13 @@
+<form class="pure-form pure-form-stacked" action="/categories/<%= @category[:id] %>/update" method="post">
+    <fieldset>
+        <legend>Update the Category Name</legend>
+        <label for="category">Enter the new name for your category:</label>
+        <input type="text" name="category"  value="<%= @category[:category] %>" />
+        <span class="pure-form-message">This is a required field.</span>
+        <br>
+
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        <a class="pure-button" href="/categories">Cancel</a>
+    </fieldset>
+</form>
+

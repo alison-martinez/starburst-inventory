@@ -1,0 +1,9 @@
+<form class="pure-form" action="/categories/<%= @category_id %>/items/<%= @item_id %>/destroy" method="post">
+    <label for="option-one" class="pure-radio">
+        <input type="radio" id="option-one" name="optionsRadios" value="delete" checked="" /> Yes, I want to delete this item!
+    </label>
+    <label for="option-two" class="pure-radio">
+        <input type="radio" id="option-two" name="optionsRadios" value="cancel" /> I messed up!  Take me back to the category page!
+    </label>
+    <button type="submit" class="pure-button pure-button-primary">Submit</button>
+</form>

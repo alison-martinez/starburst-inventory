@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Franciscan Starburst Inventory</title>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" 
+      integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" 
+      crossorigin="anonymous">
+      <link rel="stylesheet" href="/stylesheets/starburst.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Risque&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/fcd4f0f3dd.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <header>
+    
+    </header>
+
+    <% if session[:error] %>
+      <div class="flash error">
+        <p><%= session.delete(:error) %></p>
+      </div>
+    <% end %>
+
+    <% if session[:success] %>
+      <div class="flash success">
+        <p><%= session.delete(:success) %></p>
+      </div>
+    <% end %>
+
+    <main>
+      <%== yield %>
+    </main>
+     
+  </body>
+</html>
+

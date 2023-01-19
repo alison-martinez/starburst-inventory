@@ -1,0 +1,24 @@
+<form class="pure-form pure-form-stacked" method="post" action="/users/signin">   
+    <fieldset>
+        <legend>Please sign in to continue.</legend>
+
+        <label for="username">Username</label>
+        <input name="username" id="username" placeholder="Username" />
+      
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" />
+        
+        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+        <a class="pure-button" href="/">Cancel</a>
+    </fieldset>
+</form>
+
+<br>
+<br>
+<form action="/users/create" method="get" >
+  <legend>Don't have an account?  Create one now!</legend>
+  <br>
+  <button class="pure-button button-secondary" type="submit">Create a New Account</button>
+</form>
+
+
