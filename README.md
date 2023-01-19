@@ -18,6 +18,7 @@ In keeping with the general project requirements:
 * The application uses Sinatra
 * The application uses ERB view templates
 * The application uses PostgreSQL to store dta and uses the `pg` gem
+* The application uses MongoDB to store user authentication data
 * The application does not use additional Rubygems for the purposes of fulfulling the project requirements.  The only additional gem not used in RB175 or RB185 is used for easily implementing title case for the category and item display.
 
 With regards to the application-specific requirements:
@@ -42,6 +43,6 @@ Details on running this application:
 5. Create the `inventory` database by running `createdb inventory` from your command line. 
 6. Import the tables and test data into the `inventory` database by using `psql -d inventory < schema.sql` from the command line
 7. Run the app by running `ruby ./inventory.rb` from your command line, and then direct your browser to `http://127.0.0.1:4567` to view the app.
-8.  You must be signed in to access most of the features of the app.  Usernames and encrypted passwords are stored in the `users.yaml` file.  You can gain access with the username `launchschool` and the password `assessment`. You can also create your own account.  
+8.  You must be signed in to access most of the features of the app.  Usernames and encrypted passwords are stored in a MongoDB database.  You can gain access with the username `launchschool` and the password `assessment`. You can also create your own account.  
 
 Please feel free to reach out to me on the Launch School communication tool with any questions.  Thank you!
