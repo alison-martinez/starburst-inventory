@@ -1,6 +1,0 @@
-development:
-  clients:
-    default:
-      uri: mongodb+srv://fullstack:alisonmartinez@cluster0.yi8xdut.mongodb.net/starburstApp?retryWrites=true&w=majority
-      options:
-        server_selection_timeout: 5
