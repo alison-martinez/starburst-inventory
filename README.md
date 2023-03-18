@@ -19,7 +19,7 @@ In keeping with the general project requirements:
 * The application uses ERB view templates
 * The application uses PostgreSQL to store dta and uses the `pg` gem
 * The application uses MongoDB to store user authentication data
-* The application does not use additional Rubygems for the purposes of fulfulling the project requirements.  The only additional gem not used in RB175 or RB185 is used for easily implementing title case for the category and item display.
+* The application does not use additional Rubygems for the purposes of fulfulling the project requirements.  
 
 With regards to the application-specific requirements:
 * The application contains two kinds of related data -- categories and items.  Categories are collections of items.  There is a one-to-many relationship between categories and items.  
